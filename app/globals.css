@@ -17,6 +17,9 @@ body {
 }
 
 :root {
+  --background: #f9f7f4;
+  --foreground: #3a3a3a;
+
   --sage-green: #8b9d83;
   --olive: #6b7353;
   --charcoal: #3a3a3a;

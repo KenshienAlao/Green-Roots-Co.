@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, AnimatePresence } from "framer-motion";
 import { Leaf, Menu, ShoppingCart, X } from "lucide-react";
 import { useState } from "react";
 
@@ -35,7 +36,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-olive/10 sticky top-0 z-50 border-b shadow-sm backdrop-blur-sm">
+    <nav className="border-olive/10 sticky top-0 z-50 border-b bg-white/95 shadow-sm backdrop-blur-sm">
       <div className="container mx-auto flex items-center justify-between lg:justify-around">
         {/* logo */}
         <div className="flex items-center gap-2 p-5">
@@ -65,22 +66,37 @@ export default function Navbar() {
         </div>
 
         {/* links (mobile) */}
-        <div className={`sidebar gap-2 ${isOpen ? "flex" : "hidden"}`}>
-          <button className="p-4" onClick={() => setIsOpen(false)}>
-            <X className="text-charcoal size-10" />
-          </button>
-          {linkInfo.map((items) => (
-            <div
-              className="hover:bg-olive flex w-full justify-center p-5 text-[18px] md:text-[15px] lg:p-4 lg:text-[20px] xl:p-6 xl:text-2xl"
-              key={items.id}
-            >
-              <a className="text-charcoal font-body" href={items.path}>
-                {items.label}
-              </a>
-            </div>
-          ))}
-        </div>
 
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="sidebar gap-2"
+              initial={{
+                x: "100%",
+              }}
+              animate={{
+                x: "0%",
+              }}
+              exit={{
+                x: "100%",
+              }}
+            >
+              <button className="p-4" onClick={() => setIsOpen(false)}>
+                <X className="text-charcoal size-10" />
+              </button>
+              {linkInfo.map((items) => (
+                <div
+                  className="hover:bg-olive flex w-full justify-center p-5 text-[18px] md:text-[15px] lg:p-4 lg:text-[20px] xl:p-6 xl:text-2xl"
+                  key={items.id}
+                >
+                  <a className="text-charcoal font-body" href={items.path}>
+                    {items.label}
+                  </a>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
         {/* Shop */}
         <div className="flex items-center justify-center gap-2 p-5">
           <button className="hover:bg-warm-beige/50 flex rounded-full p-2 transition-all">
