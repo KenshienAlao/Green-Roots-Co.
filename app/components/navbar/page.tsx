@@ -35,6 +35,7 @@ const linkInfo = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // for sidebar
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 786) {
@@ -54,10 +55,13 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between lg:justify-around">
         {/* logo */}
         <div className="flex items-center gap-2 p-5">
-          <div className="bg-sage flex h-8 w-8 items-center justify-center rounded-full sm:h-9 sm:w-9 lg:h-10 lg:w-10">
-            <Leaf className="size-5 sm:size-6 lg:size-7" color="white" />
+          <div className="bg-sage flex size-[clamp(1.97rem,calc(1.786rem+0.918vw),2.48rem)] items-center justify-center rounded-full">
+            <Leaf
+              className="size-[clamp(1.22rem,calc(1.036rem+0.918vw),1.72rem)]"
+              color="white"
+            />
           </div>
-          <span className="text-olive font-heading text-[12px] sm:text-[18px] lg:text-2xl">
+          <span className="text-olive font-heading text-[clamp(0.78rem,calc(0.382rem+1.991vw),1.88rem)]">
             GreenRoot Co.
           </span>
         </div>
@@ -100,7 +104,7 @@ export default function Navbar() {
               </button>
               {linkInfo.map((items) => (
                 <div
-                  className="hover:bg-olive flex w-full justify-center p-5 text-[18px] md:text-[15px] lg:p-4 lg:text-[20px] xl:p-6 xl:text-2xl"
+                  className="hover:bg-olive flex w-full justify-center p-5 text-[18px] md:text-[15px]"
                   key={items.id}
                 >
                   <a className="text-charcoal font-body" href={items.path}>
