@@ -52,7 +52,7 @@ export default function Hero() {
             className=""
           >
             <img
-              src="/hero/hero.svg"
+              src="/hero/hero.png"
               alt="Cozy Room"
               className="h-[clamp(12.47rem,calc(5.641rem+34.145vw),31.25rem)] w-full rounded-2xl object-cover"
             />
