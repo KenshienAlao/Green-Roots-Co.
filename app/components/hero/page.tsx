@@ -52,7 +52,7 @@ export default function Hero() {
             className=""
           >
             <img
-              src="/hero/hero.png"
+              src="https://images.unsplash.com/photo-1617202074052-fa303398aa00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRvb3IlMjBwbGFudHMlMjBjb3p5JTIwcm9vbXxlbnwxfHx8fDE3NjgwOTUxMTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Cozy Room"
               className="h-[clamp(12.47rem,calc(5.641rem+34.145vw),31.25rem)] w-full rounded-2xl object-cover"
             />
