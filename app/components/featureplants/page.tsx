@@ -59,7 +59,7 @@ export default function FeaturePlants() {
   const isVisibile = useInView(check, { amount: 0 });
 
   return (
-    <section id="shopfeature" className="bg-off px-8 py-20">
+    <section id="shopFeature" className="bg-off px-8 py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
           ref={check}
