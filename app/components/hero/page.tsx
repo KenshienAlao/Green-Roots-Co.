@@ -1,11 +1,14 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="relative bg-transparent px-5 py-5 sm:px-10 sm:py-10 md:px-15 md:py-15">
+    <div
+      id="home"
+      className="relative scroll-mt-100 bg-transparent px-5 py-5 sm:px-10 sm:py-10 md:px-15 md:py-15"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* text */}

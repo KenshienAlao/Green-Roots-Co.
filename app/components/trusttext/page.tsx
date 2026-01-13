@@ -34,7 +34,7 @@ export default function TrustText() {
   return (
     <section className="border-olive/10 border-y bg-white py-16">
       <div className="mx-auto max-w-7xl px-8">
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-5 sm:gap-12 sm:grid-cols-4">
           {TrustInfo.map((info) => (
             <div
               key={info.id}

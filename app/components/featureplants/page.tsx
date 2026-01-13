@@ -1,7 +1,8 @@
 "use client";
 
 import { MoveRight, ShoppingCart } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 const PlantsChoose = [
   {
     id: 1,
@@ -54,25 +55,19 @@ const PlantsChoose = [
 ];
 
 export default function FeaturePlants() {
+  const check = useRef(null);
+  const isVisibile = useInView(check, { amount: 0 });
+
   return (
-    <section className="bg-off px-8 py-20">
+    <section id="shopfeature" className="bg-off px-8 py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
+          ref={check}
+          animate={isVisibile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{
             duration: 0.5,
             type: "tween",
             stiffness: 300,
-          }}
-          viewport={{
-            once: true,
           }}
           className="mb-12 text-center"
         >
@@ -84,21 +79,12 @@ export default function FeaturePlants() {
           </p>
         </motion.div>
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
+          ref={check}
+          animate={isVisibile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{
-            duration: 1.5   ,
+            duration: 1.5,
             type: "tween",
             stiffness: 300,
-          }}
-          viewport={{
-            once: true,
           }}
           className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-3"
         >
