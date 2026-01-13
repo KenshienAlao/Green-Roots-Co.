@@ -32,9 +32,13 @@ export default function Hero() {
                 whileTap={{
                   scale: 0.95,
                 }}
-                className="bg-olive font-body hover:bg-olive/90 flex items-center gap-2 rounded-full p-[clamp(0.50rem,calc(0.227rem+1.364vw),1.25rem)] px-[clamp(1.00rem,calc(0.636rem+1.818vw),2.00rem)] py-[clamp(0.75rem,calc(0.568rem+0.909vw),1.25rem)] text-[clamp(0.65rem,calc(0.341rem+1.545vw),1.50rem)] text-white hover:text-white/90"
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                }}
+                className="bg-olive font-heading hover:bg-olive/90 flex items-center gap-2 rounded-full p-[clamp(0.50rem,calc(0.227rem+1.364vw),1.25rem)] px-[clamp(1.00rem,calc(0.636rem+1.818vw),2.00rem)] py-[clamp(0.75rem,calc(0.568rem+0.909vw),1.25rem)] text-[clamp(0.65rem,calc(0.341rem+1.545vw),1.50rem)] text-white hover:text-white/90"
               >
-                Shop Plants{" "}
+                Shop Plants
                 <ArrowRight className="size-[clamp(0.75rem,calc(0.114rem+3.182vw),2.50rem)]" />
               </motion.button>
             </div>
