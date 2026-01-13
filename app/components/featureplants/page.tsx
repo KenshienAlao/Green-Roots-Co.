@@ -62,8 +62,17 @@ export default function FeaturePlants() {
     <section id="shopFeature" className="bg-off scroll-mt-20 px-8 py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
-          ref={check}
-          animate={isVisibile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: false,
+          }}
           transition={{
             duration: 0.5,
             type: "tween",
@@ -78,24 +87,27 @@ export default function FeaturePlants() {
             Handpicked selections for every home and budget
           </p>
         </motion.div>
-        <motion.div
-          ref={check}
-          animate={isVisibile ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{
-            duration: 1.5,
-            type: "tween",
-            stiffness: 300,
-          }}
-          className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-3"
-        >
+        <div className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {PlantsChoose.map((info__PlantChoose) => (
             <motion.div
-              whileHover={{
-                scale: 1.05,
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: false,
               }}
               transition={{
+                duration: 0.5,
                 type: "tween",
                 stiffness: 300,
+              }}
+              whileHover={{
+                scale: 1.05,
               }}
               className="overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-2xl"
               key={info__PlantChoose.id}
@@ -136,8 +148,26 @@ export default function FeaturePlants() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-        <div className="flex justify-center">
+        </div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: false,
+          }}
+          transition={{
+            duration: 0.5,
+            type: "tween",
+            stiffness: 300,
+          }}
+          className="flex items-center justify-center"
+        >
           <motion.button
             whileHover={{
               scale: 1.05,
@@ -149,14 +179,14 @@ export default function FeaturePlants() {
               type: "tween",
               stiffness: 300,
             }}
-            className="bg-olive/90 font-heading flex items-center gap-2 rounded-full px-7 py-4 text-2xl text-white"
+            className="bg-olive/90 font-heading flex items-center gap-2 rounded-full px-[clamp(1.25rem,calc(1.114rem+0.678vw),1.75rem)] py-[clamp(0.50rem,calc(0.364rem+0.678vw),1.00rem)] text-[clamp(1.22rem,calc(1.144rem+0.380vw),1.50rem)] text-white"
           >
             see more
             <span>
-              <MoveRight />
+              <MoveRight className="size-5" />
             </span>
           </motion.button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

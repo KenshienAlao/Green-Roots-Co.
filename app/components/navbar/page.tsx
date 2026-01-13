@@ -22,8 +22,8 @@ const linkInfo = [
   },
   {
     id: 4,
-    label: "Blog",
-    path: "blog",
+    label: "Sustainability",
+    path: "sustainablity",
   },
   {
     id: 5,
