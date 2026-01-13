@@ -5,7 +5,8 @@
   --color-sage: var(--sage-green);
   --color-olive: var(--olive);
   --color-charcoal: var(--charcoal);
-  --color-warm-beige: var(--warm-beige);
+  --color-warm: var(--warm-beige);
+  --color-off: var(--off-white);
   --font-heading: var(--heading);
   --font-body: var(--body);
 }
@@ -24,6 +25,7 @@ body {
   --olive: #6b7353;
   --charcoal: #3a3a3a;
   --warm-beige: #e8ddd3;
+  --off-white: #f9f7f4;
 
   /* typo */
   --heading: "Lora", serif;
