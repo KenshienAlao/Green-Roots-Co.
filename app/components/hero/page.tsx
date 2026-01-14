@@ -108,8 +108,9 @@ export default function Hero() {
                   scale: 0.95,
                 }}
                 transition={{
-                  type: "spring",
-                  stiffness: 300,
+                  type: "tween",
+                  stiffness: 200,
+                  damping: 40,
                 }}
                 className="bg-olive font-heading hover:bg-olive/90 flex items-center gap-2 rounded-full p-[clamp(0.50rem,calc(0.227rem+1.364vw),1.25rem)] px-[clamp(1.00rem,calc(0.636rem+1.818vw),2.00rem)] py-[clamp(0.75rem,calc(0.568rem+0.909vw),1.25rem)] text-[clamp(1rem,calc(0.341rem+1.545vw),1.50rem)] text-white hover:text-white/90"
               >

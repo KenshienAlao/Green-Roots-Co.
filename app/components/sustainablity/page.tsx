@@ -13,7 +13,7 @@ export default function Sustanaibility() {
   ];
 
   return (
-    <section id="sustainablity" className="bg-white px-8 py-20">
+    <section id="sustainablity" className="bg-white px-8 py-20 scroll-mt-35">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div className="space-y-6">

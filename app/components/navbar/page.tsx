@@ -17,16 +17,11 @@ const linkInfo = [
   },
   {
     id: 3,
-    label: "About Us",
-    path: "aboutUs",
-  },
-  {
-    id: 4,
     label: "Sustainability",
     path: "sustainablity",
   },
   {
-    id: 5,
+    id: 4,
     label: "Contact",
     path: "contact",
   },
