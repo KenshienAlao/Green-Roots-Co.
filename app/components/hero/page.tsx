@@ -23,7 +23,7 @@ export default function Hero() {
                 opacity: 1,
               }}
               viewport={{
-                once: false,
+                once: true,
               }}
               transition={{
                 type: "keyframes",
